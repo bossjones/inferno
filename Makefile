@@ -1,5 +1,5 @@
 build:
-	docker build -t jmorton/inferno .
+	docker build -t jmorton/inferno runner
 	docker tag jmorton/inferno jmorton/infero:latest
 
 shell:

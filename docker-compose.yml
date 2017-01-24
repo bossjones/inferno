@@ -20,8 +20,8 @@ services:
       - MESOS_LOG_DIR=/var/log/mesos
       - MESOS_WORK_DIR=/var/tmp/mesos
     volumes:
-      - ./volumes/log/mesos:/var/log/mesos"
-      - ./volumes/tmp/mesos:/var/tmp/mesos"
+      - .tmp/volumes/log/mesos:/var/log/mesos"
+      - .tmp/volumes/tmp/mesos:/var/tmp/mesos"
   mesos-slave:
     image: mesosphere/mesos-slave:1.0.3-rc1
     network_mode: host
@@ -35,8 +35,8 @@ services:
       - MESOS_LOG_DIR=/var/log/mesos
       - MESOS_WORK_DIR=/var/tmp/mesos
     volumes:
-      - ./volumes/log/mesos:/var/log/mesos
-      - ./volumes/tmp/mesos:/var/tmp/mesos
+      - .tmp/volumes/log/mesos:/var/log/mesos
+      - .tmp/volumes/tmp/mesos:/var/tmp/mesos
       - /var/run/docker.sock:/var/run/docker.sock
       - /cgroup:/cgroup
       - /sys:/sys
