@@ -9,6 +9,9 @@ sed -i 's;SPARK_MASTER;'$SPARK_MASTER';g' /opt/spark/conf/spark-defaults.conf
 sed -i 's;MESOS_EXECUTOR_CORE;'$MESOS_EXECUTOR_CORE';g' /opt/spark/conf/spark-defaults.conf
 sed -i 's;SPARK_IMAGE;'$SPARK_IMAGE';g' /opt/spark/conf/spark-defaults.conf
 sed -i 's;CURRENT_IP;'$CURRENT_IP';g' /opt/spark/conf/spark-defaults.conf
+sed -i 's;SPARK_PRINCIPAL;'$SPARK_PRINCIPAL';g' /opt/spark/conf/spark-defaults.conf
+sed -i 's;SPARK_SECRET;'$SPARK_SECRET';g' /opt/spark/conf/spark-defaults.conf
+sed -i 's;SPARK_ROLE;'$SPARK_ROLE';g' /opt/spark/conf/spark-defaults.conf
 
 export SPARK_LOCAL_IP=${SPARK_LOCAL_IP:-${CURRENT_IP:-"127.0.0.1"}}
 export SPARK_PUBLIC_DNS=${SPARK_PUBLIC_DNS:-${SPARK_PUBLIC_DNS:-"127.0.0.1"}}
