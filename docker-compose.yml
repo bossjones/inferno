@@ -51,3 +51,7 @@ services:
       - MARATHON_HTTP_ADDRESS=127.0.0.1
       - MARATHON_MASTER=zk://127.0.0.1:2181/mesos
       - MARATHON_ZK=zk://127.0.0.1:2181/marathon
+  download-server:
+    build: images/download-server
+    ports: 
+      - 9999:80
